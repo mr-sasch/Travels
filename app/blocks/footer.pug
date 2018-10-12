@@ -1,0 +1,79 @@
+// Возникли вопросы?
+//- .footer__form
+//-   .container
+//-     .row
+//-       .col-12.text-center
+//-         .footer__form-ttl Возникли вопросы? Оставь свои контактные данные и наш менеджер свяжется с вами
+//-         form.footer__form-inputs
+//-           input.footer__form-inputs-input(type='text' placeholder='Имя')
+//-           input.footer__form-inputs-input(type='phone' placeholder='Телефон')
+//-           input.footer__form-inputs-input(type='mail' placeholder='Email')
+//-           input.footer__form-inputs-input.footer__form-inputs-input_submit(type='submit')
+    
+  
+// /Возникли вопросы?
+footer
+  .container
+    .row
+      .footer__separ
+    .row
+      .col-12.col-md-6.col-lg-5
+        //- img.footer__logo(src='images/logo__header.png')
+        .footer__txt Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык            
+      .col-12.col-md-6.col-lg-4.mt-4.mt-md-0
+        .footer__contacts
+          .footer__contacts-ttl Контакты
+          .footer__contacts-row
+            .footer__contacts-row-left
+              //- img.footer__contacts-row-left-img(src='images/footer__telephone.png')
+            .footer__contacts-row-right
+              .footer__contacts-row-right-row +375 44 265 25 12
+              .footer__contacts-row-right-row +375 44 123 45 78
+          .footer__contacts-row
+            .footer__contacts-row-left
+              //- img.footer__contacts-row-left-img(src='images/footer__mail.png')
+            .footer__contacts-row-right
+              .footer__contacts-row-right-txt informblog@gmail.com
+        .footer__socials
+          .footer__socials-ttl.footer__contacts-ttl Мы в социальных сетях
+          .footer__socials-items
+            //- a.footer__socials-items-item(href='#')
+            //-   img.footer__socials-items-item(src='images/footer__socials-vk.png')
+            //- a.footer__socials-items-item(href='#')
+            //-   img.footer__socials-items-item(src='images/footer__socials-skype.png')
+            //- a.footer__socials-items-item(href='#')
+            //-   img.footer__socials-items-item(src='images/footer__socials-inst.png')
+            //- a.footer__socials-items-item(href='#')
+            //-   img.footer__socials-items-item(src='images/footer__socials-fb.png')
+      .col-12.col-md-6.col-lg-3.mt-4.mt-lg-0
+        .footer__nav-items          
+          a(href='about.html').navbar__navs-nav-a.footer__nav-item О нас
+          a(href='news.html').navbar__navs-nav-a.footer__nav-item Новости
+          a(href='links.html').navbar__navs-nav-a.footer__nav-item Полезные ссылки
+          a(href='doska.html').navbar__navs-nav-a.footer__nav-item Доска объявлений
+          a(href='buro.html').navbar__navs-nav-a.footer__nav-item Бюро переводов
+          a(href='trans.html').navbar__navs-nav-a.footer__nav-item Для переводчиков
+          a(href='zakonod.html').navbar__navs-nav-a.footer__nav-item Законодательство Китая
+          a(href='gos-ustroistvo.html').navbar__navs-nav-a.footer__nav-item Государственное устройство
+          a(href='holidays-main.html').navbar__navs-nav-a.footer__nav-item Праздники и традиции
+          a(href='kitaevedi.html').navbar__navs-nav-a.footer__nav-item Китаеведы, НИИ
+          a(href='gos-standarts.html').navbar__navs-nav-a.footer__nav-item Госстандарты КНР
+    // Копирайт
+    .row
+      .footer__separ
+    .row
+      .footer__copyright copyright ©2018 Все права защищены      
+    //- модалки
+    +modal()
+    +modal2()
+    +modal3()
+
+// Прокрутка к началу страницы
+a.scroll-to-top.mobile-hide(href="#" style='display: none')
+// /Прокрутка к началу страницы
+      
+// Скрипты 
+// Bootstrap
+script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js")
+script(src="assets/slick.js")
+script(type="text/javascript" src="assets/scripts.js")

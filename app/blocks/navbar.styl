@@ -1,0 +1,38 @@
+/*! Главное меню */
+.navbar__nav
+  display -webkit-flex
+  display -ms-flex
+  display flex
+  flex-direction row
+  flex-wrap nowrap
+  justify-content space-between
+
+.navbar__nav-item
+  color #fff
+  font-weight 600
+  position relative
+
+.navbar__nav-item:after
+  content ''
+  position absolute
+  background-color colorBlue
+  height 2px
+  width 0
+  bottom -8px
+  left 50%
+  transform translateX(-50%)
+  transition width .2s ease
+
+.navbar__nav-item:hover:after
+  width 100%
+
+.navbar__nav-item:hover
+  color #fff
+  text-decoration none
+
+.col_navbar__logo
+  flex-grow 0
+
+.col_navbar__nav
+  flex-grow 1
+/* /Главное меню */

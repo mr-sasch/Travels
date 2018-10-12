@@ -1,0 +1,739 @@
+//! Заголовок с чертой слева
+.title-left
+  display -webkit-flex
+  display -ms-flex
+  display flex
+  flex-direction row
+
+.title-left__text
+  flex-grow 0
+  padding-right 10px
+
+.title-left__line
+  flex-grow 1
+  position relative
+.title-left__line:before
+  content ''
+  position absolute
+  top 60%
+  transform translateY(-50%)
+  border-top 1px solid #959595
+  left 0
+  width 100%
+  height 2px
+//! /Заголовок с чертой слева
+
+//! Текстовый блок с картинкой сверху
+.block-pic-top
+  height 100%
+  background-color block-pic-top-bg
+  shadowTxtBlocks()
+  display -webkit-flex
+  display -ms-flex
+  display flex
+  flex-direction column
+
+.block-pic-top__pic
+  height 200px
+  background-repeat no-repeat
+  background-size cover
+  flex-grow 0
+
+.block-pic-top__cntnt
+  position relative
+  padding 15px 15px 35px 20px
+  flex-grow 1
+
+.block-pic-top__cntnt-ttl
+  font-size 20px
+  line-height 20px
+  color #262626
+  font-weight 600
+
+.block-pic-top__cntnt-txt
+  color #000
+  font-size 18px
+  line-height 22px
+  font-weight 300
+  margin-top 15px
+  margin-bottom 20px
+
+.block-pic-top__cntnt-href
+  text-align right
+  position absolute
+  right 0
+  width 100%
+  padding-right 15px
+  bottom 10px
+
+.block-pic-top__cntnt-href-a
+  font-size 16px
+  font-weight 400
+  color #000
+  outline none
+.block-pic-top__cntnt-href-a:hover
+  color #000
+.block-pic-top__cntnt-href-a:active
+  color #000
+//! /Текстовый блок с картинкой сверху
+
+//! Текстовый блок с картинкой слева
+.block-pic-left
+  min-height 293px
+  display -webkit-flex
+  display -ms-flex
+  display flex
+  flex-direction row
+  background-color block-pic-top-bg
+  shadowTxtBlocks()
+
+.block-pic-left__pic
+  width 100%
+  max-width 370px
+  background-repeat no-repeat
+  background-size cover
+  flex-shrink 0
+
+.block-pic-left__cntnt
+  padding 20px 20px 35px 30px
+  position relative
+  flex-shrink 1
+
+.block-pic-left__cntnt-ttl
+  font-size 20px
+  line-height 20px
+  color #262626
+  font-weight 600
+
+.block-pic-left__cntnt-txt
+  color #000
+  font-size 18px
+  line-height 22px
+  font-weight 300
+  margin-top 15px
+  margin-bottom 20px
+
+.block-pic-left__cntnt-href
+  text-align right
+  position absolute
+  bottom 0
+  left 0
+  width 100%
+  padding-right 15px
+  bottom 10px
+
+.block-pic-left__cntnt-href-a
+  font-size 16px
+  font-weight 400
+  color #000
+.block-pic-left__cntnt-href-a:hover
+  color #000
+//! /Текстовый блок с картинкой слева
+
+//! Рекламный баннер
+.adv-banner
+  position relative
+  width 100%
+  height 100%
+  min-height 250px
+  background-image url('../images/main__banner-1.jpg')
+  background-size cover
+  background-repeat no-repeat
+  display -webkit-flex
+  display -ms-flex
+  display flex
+  justify-content center
+  align-items center
+  padding 30px
+
+.adv-banner:before
+  content ''
+  position absolute
+  width 100%
+  height 100%
+  top 0
+  left 0
+  z-index 10
+  opacity .78
+  background-color #082f08
+
+.adv-banner__txt
+  position relative
+  color #fff
+  font-size 24px
+  line-height 24px
+  z-index 20
+//! /Рекламный баннер
+
+//! УТП вер.1
+.utp1
+  background-image url(../images/main__form-1.jpg)
+  background-size cover
+  text-align center
+  padding 70px 10px
+  font-size 24px
+  line-height 28px
+  color #fff
+
+.utp1__ttl
+  font-size 3em
+  line-height 1em
+  color #fff
+  font-weight 600
+  margin auto
+  max-width 950px
+
+.utp1__txt
+  padding 40px 0
+  max-width 900px
+  margin auto
+  font-weight 300
+
+@media screen and (max-width 550px)
+  .utp1__ttl
+    font-size 1.8em
+//! /УТП вер.1
+
+//! Стандартная красная кнопка
+.red-btn
+  color #fff
+  font-size 24px
+  font-weight 300
+  border 2px solid rgba(#ffffff, 0.9)
+  background-color rgba(#830000, 0.62)
+  padding 2px 20px 8px
+  cursor pointer
+  transition .2s ease
+
+.red-btn:focus
+  outline none
+
+.red-btn:hover
+  border 2px solid rgba(#ffffff, 1)
+  background-color rgba(#830000, 1)
+
+//! /Стандартная красная кнопка
+
+//! Баннер на всю ширину
+.adv-full-width
+  height 250px
+  background-color #93cac4
+  display -webkit-flex
+  display -ms-flex
+  display flex
+  justify-content center
+  align-items center
+  font-size 36px
+  font-weight 600
+  color #fff
+//! /Баннер на всю ширину
+
+//! Заголовок с чертами по бокам
+.title-center
+  display -webkit-flex
+  display -ms-flex
+  display flex
+  flex-direction row
+  justify-content space-around
+
+
+.title-center__line-text
+  flex-grow 0
+  padding 0 10px
+
+.title-center__line-left
+  position relative
+  flex-grow 1
+
+.title-center__line-left:before
+  content ''
+  position absolute
+  top 56%
+  transform translateY(-50%)
+  border-top 1px solid #959595
+  left 0
+  width 100%
+  height 2px
+
+.title-center__line-right
+  position relative
+  flex-grow 1
+
+.title-center__line-right:before
+  content ''
+  position absolute
+  top 56%
+  transform translateY(-50%)
+  border-top 1px solid #959595
+  left 0
+  width 100%
+  height 2px
+
+//! /Заголовок с чертами по бокам
+
+//! Смотреть полный текст
+.main__seo-txt-more-btn
+  color #739214
+  font-size 16px
+  cursor pointer
+  font-weight 600
+  display inline-block
+  width 180px
+  height 24px
+  position relative
+
+.main__seo-txt-more-btn-show,
+.main__seo-txt-more-btn-hide
+  position absolute
+  left 0
+  top 50%
+  transform translateY(-50%)
+
+.main__seo-txt-more-btn-show:hover,
+.main__seo-txt-more-btn-hide:hover
+  text-decoration underline
+//! /Смотреть полный текст
+
+//! Заголовок простой страницы
+.header__simple
+  position relative
+  background-size cover
+  background-repeat no-repeat
+  background-position center
+
+.simple__slider
+  position relative
+.simple__slider:before
+  content ''
+  position absolute
+  top 0
+  left 0
+  height 100%
+  width 100%
+  background-color #292929bf
+
+.simple__slider-ttl
+  display -webkit-flex
+  display -ms-flex
+  display flex
+  flex-direction row
+
+.simple__slider-ttl-left,
+.simple__slider-ttl-right
+  position relative
+  flex-grow 1
+
+.simple__slider-ttl-left:before,
+.simple__slider-ttl-right:before
+  content ''
+  position absolute
+  height 1px
+  width 100%
+  border 1px solid textGreen
+  top 54%
+  transform translateY(-50%)
+
+.simple__slider-ttl-txt
+  flex-grow 0
+  color textGreen
+  font-size 3.6em
+  line-height 1em
+  font-weight 700
+  padding 50px 30px
+  text-align center
+
+@media screen and (max-width 800px)
+  .simple__slider-ttl-txt
+    font-size 2em
+//! /Заголовок простой страницы
+@media screen and (max-width 380px)
+  .simple__slider-ttl-txt
+    font-size 1.5em
+//! /Заголовок простой страницы
+
+//! Крошки
+.breabcrumbs
+  display -webkit-flex
+  display -ms-flex
+  display flex
+  flex-direction row
+  margin 20px 0
+  font-size 12px
+  flex-wrap wrap
+  margin-bottom 50px
+
+a.breabcrumbs__item
+  color #7d7d7d
+a.breabcrumbs__item:hover
+  color #7d7d7d
+
+.breabcrumbs__separ
+  margin 0 10px
+
+.breabcrumbs__item-current
+  color #8da937
+//! /Крошки
+
+//! Боковое меню
+.side-menu
+  shadowTxtBlocks()
+
+.side-menu__item
+  position relative
+  font-size 18px
+  color #494949
+  background-color #f8f8f8
+  padding 10px 20px
+  display block
+  border-bottom 1px solid textGreen
+  transition .2s ease
+
+.side-menu__item:last-child
+  border-bottom none
+
+.side-menu__item:hover
+  text-decoration none
+  color #494949
+  background-color #888888
+  color #fff
+
+.side-menu__item:before
+  content ''
+  position absolute
+  background-color transparent
+  height 100%
+  width 10px
+  top 0
+  left 0
+  transition .2s ease
+
+.side-menu__item:hover:before
+  background-color textGreen
+
+//! /Боковое меню
+
+//! УТП вер.2
+.utp2
+  background-image url(../images/utp2-bg.jpg)
+  background-position center
+  background-size cover
+  background-repeat no-repeat
+  color #fff
+  position relative
+  padding 40px 0
+.utp2:before
+  content ''
+  position absolute
+  width 100%
+  height 100%
+  top 0
+  left 0
+  background-color #0000007a
+
+.utp2__ttl
+  font-size 46px
+  line-height 42px
+  font-weight 600
+
+.utp2__ttl-yellow
+  color yellow
+
+.utp2__txt
+  font-size 18px
+  line-height 18px
+  margin 20px 0
+
+.utp2__btn
+  .red-btn
+    background-color #d400008f
+  .red-btn:hover
+    background-color #d40000
+
+@media screen and (max-width 750px)
+  .utp2__ttl
+    font-size 36px
+    line-height 36px
+//! /УТП вер.2
+
+//! Пагинация
+.pagination
+  display -webkit-flex
+  display -ms-flex
+  display flex
+
+.pagination__item
+  color #8c8c8c
+  font-size 22px
+  padding 0 8px
+
+.pagination__item:hover
+  color #8c8c8c
+
+.pagination__item.pagination__item-current
+  background-color textGreen
+  border-radius 50%
+  color #000
+  height 33px
+  width 33px
+  text-align center
+//! /Пагинация
+
+//! Большая красная кнопка
+.big-red-button
+  background-color #a00000
+  color #fff
+  text-align center
+  padding 8px 0
+  font-size 18px
+  cursor pointer
+//! /Большая красная кнопка
+
+//! Боковое меню
+.catalog
+  padding-left 0px
+  ul
+    padding-left 0
+    list-style-type none
+    border 1px solid #8888885e
+    border-top none
+
+#sideMenu
+  shadowTxtBlocks()
+.catalog-item
+  overflow hidden
+  border-bottom 1px solid textGreen
+.catalog-item:last-child
+  border-bottom 0
+.catalog-item:first-child
+  border-bottom 1px solid textGreen
+
+.catalog-item__ttl,
+.catalog-menu__link
+  position relative
+  background-color #f8f8f8
+  cursor pointer
+  padding 20px
+  transition .2s ease
+  font-size 18px
+  color #494949
+  line-height 1em
+.catalog-item__ttl:hover,
+.catalog-menu__link:hover,
+.catalog-menu__link.active
+  background-color #888
+  color #fff
+  text-decoration none
+.active > .catalog-item__ttl
+  background-color #888
+  color #fff
+.active > .catalog-item__ttl:before
+  background-color textGreen
+.catalog-item__ttl:before,
+.catalog-menu__link:before
+  position absolute
+  content ''
+  background-color transparent
+  height 100%
+  width 10px
+  top 0
+  left 0
+  transition .2s ease
+.catalog-item__ttl:hover:before,
+.catalog-menu__link:hover:before,
+.catalog-menu__link.active:before
+  background-color textGreen
+  text-decoration none
+
+.catalog-item__ttl:after
+  content ''
+  position absolute
+  right 15px
+  top 50%
+  transform translateY(-70%) rotate(-135deg)
+  border-left 1px solid grey
+  border-top 1px solid grey
+  height 10px
+  width 10px
+  transition .2s ease
+.catalog-item__ttl:hover:after
+.active > .catalog-item__ttl:after
+  border-color #fff
+
+.catalog-item__cntnt
+  background-color #fff
+  padding 7px
+  position absolute
+  top 0
+  left 0
+  width 100%
+  border-left 1px solid #f8f8f8
+
+.catalog-item__cntnt-wrap
+  height 0
+  overflow hidden
+  position relative
+  transition height .2s ease
+
+.catalog-menu__cntnt
+  padding-left 15px
+
+.catalog-menu__link
+  display block
+  border-bottom 1px solid textGreen
+
+.catalog-menu__ttl
+  padding 5px 0
+
+.catalog-menu__link_parent-label
+  position relative
+
+.catalog-menu__link_parent-label:after
+  content ''
+  position absolute
+  right 20px
+  top 24px
+  height 10px
+  width 10px
+  border 2px solid textGreen
+  border-top none
+  border-left none
+  transform rotate(45deg)
+  transition .2s ease
+
+.catalog-menu__link_parent-label:hover:after
+  border-color #fff
+//! /Боковое меню
+
+//! Модальное окно
+.modal-dialog
+  max-width 800px !important
+
+.modal-content
+  background-color #adc85a
+  background-image url(../images/modal__bg-image.png)
+  background-size contain
+  background-position right
+  background-repeat no-repeat
+
+.modal-content__form-cols
+  display -webkit-flex
+  display -ms-flex
+  display flex
+  flex-direction row
+
+.modal-content__form-cols-col
+  width 50%
+  display -webkit-flex
+  display -ms-flex
+  display flex
+  flex-direction column
+
+#orderDoska
+  .modal-content__form-cols-col:first-child
+    width 40%
+  .modal-content__form-cols-col:last-child
+    width 60%
+
+.modal-content__form-cols-col-input,
+.modal-content__form-cols-col-textarea
+  padding 8px 13px
+  font-style italic
+  margin 7px 0
+  border none
+  background-color #ffffffa8
+  transition .2s ease
+.modal-content__form-cols-col-input:focus,
+.modal-content__form-cols-col-textarea:focus
+  outline none
+  background-color #fff
+
+.modal-content__form-cols-col-textarea
+  flex-grow 1
+
+.modal-content__form-cols-col-file
+  position relative
+  background-color #446c1e
+  color #fff
+  font-style italic
+  font-weight 300
+  padding 8px
+  margin 7px 0
+  padding-left 40px
+  cursor pointer
+  transition .2s ease
+.modal-content__form-cols-col-file:hover
+  background-color #39581b
+
+.modal-content__form-cols-col-file:before
+  content ''
+  position absolute
+  background-image url(../images/modal__skrepka.png)
+  background-position center
+  background-size contain
+  background-repeat no-repeat
+  top 4px
+  bottom 4px
+  left 14px
+  width 15px
+
+.modal-content__form-submit
+  .red-btn
+    background-color #830000
+
+.modal-content__form-submit
+  text-align center
+
+.modal-content__title
+  font-size 30px
+  line-height 1em
+  font-weight 600
+  color #fff
+  text-shadow 1px 1px 5px grey
+
+@media screen and (max-width 575px)
+  .modal-content__form-cols-col
+    width 100%
+//! /Модальное окно
+
+//! Модальное окно - Законы
+.modal-content.modal-content_laws
+  background-image none
+  background-color #fff
+  padding 25px
+  border 3px solid #bbd766
+  display block
+
+.modal-content.modal-content_laws:after
+  content ''
+  display table
+  clear both
+
+.modal-content__img
+  height 200px
+  width 140px
+  background-image url(../images/modal4__img.jpg)
+  background-repeat no-repeat
+  background-position center
+  background-size cover
+  float left
+  margin 0 20px 20px 0
+
+.modal-content__ttl
+  color #464646
+  font-weight 600
+  font-size 16px
+  line-height 1em
+
+.modal-content__intro
+  color #505050
+  font-size 14px
+  font-weight 300
+  line-height 1.3em
+  margin 10px 0
+
+.modal-content__txt
+  color #000
+  font-size 18px
+  font-weight 300
+  line-height 1.2em
+//! /Модальное окно - Законы

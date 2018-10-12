@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible" content="ie=edge")
+    link(rel="shortcut icon" type="image/png" href="images/favicon.png")
+    title Document
+    // JQuery 
+    script(src="https://code.jquery.com/jquery-3.3.1.min.js")
+    // Bootstrap 
+    link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css")
+    // FontAwesome 
+    link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css")
+    // Стили 
+    link(rel='stylesheet' type='text/css' href='assets/slick.css')
+    link(rel='stylesheet' type='text/css' href='assets/style.css')
+    // Шрифты
+    link(href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&amp;subset=cyrillic" rel="stylesheet")
+  body
+    //- Подключаем миксины
+    include ../blocks/mixins
+    // Header 
+    include ../blocks/header__main
+    //- УТП
+    mixin utp()    
+      .utp.bg-white-grey
+        .container
+          .row
+            .col.text-center
+              .block-ttl
+                h2.block-ttl__ttl.block-ttl__ttl_utp Почему у нас круто
+                .block-ttl__comment.block-ttl__comment_utp Мы не хвастаемся, просто перечисляем факты
+          .row.mt-5
+            .col
+              .utp__item
+                h6.utp__item-ttl Активный отдых
+                .utp__item-descr У нас вам не придется скучать
+            .col
+              .utp__item
+                h6.utp__item-ttl Новые навыки
+                .utp__item-descr Цель нашего тура - обучение катанию на горных лыжах
+            .col
+              .utp__item
+                h6.utp__item-ttl Комфортное размещение
+                .utp__item-descr Вы можете выбрать комфортные аппартаменты, либо уютный коттедж
+            .col
+              .utp__item
+                h6.utp__item-ttl Персональный тренер
+                .utp__item-descr Мы предлагаем только то, что любим сами
+            .col
+              .utp__item
+                h6.utp__item-ttl С нами просто весело
+                .utp__item-descr Мы предлагаем только то, что любим сами
+    //- Мы в цифрах
+    mixin v-cifrah()
+      .numbers.pt-5.pb-5
+        .container
+          .row
+            .col.text-center
+              .block-ttl
+                h2.block__ttl.block__ttl_numbers Мы в цифрах
+          .row
+            .col
+              .numbers__item
+                .numbers__item-ttl 5 дней отдыха
+            .col
+              .numbers__item
+                .numbers__item-ttl 120 спусков на лыжах
+            .col
+              .numbers__item
+                .numbers__item-ttl Незабываемых впечатлений - бесконечно
+    //- Пакеты тура
+    mixin paketi()
+      .packs.pt-5.pb-5
+        .packs__svg
+          svg.packs__svg-svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none")
+            path(class="elementor-shape-fill" opacity="0.33" d="M473,67.3c-203.9,88.3-263.1-34-320.3,0C66,119.1,0,59.7,0,59.7V0h1000v59.7 c0,0-62.1,26.1-94.9,29.3c-32.8,3.3-62.8-12.3-75.8-22.1C806,49.6,745.3,8.7,694.9,4.7S492.4,59,473,67.3z")
+            path(class="elementor-shape-fill" opacity="0.66" d="M734,67.3c-45.5,0-77.2-23.2-129.1-39.1c-28.6-8.7-150.3-10.1-254,39.1 s-91.7-34.4-149.2,0C115.7,118.3,0,39.8,0,39.8V0h1000v36.5c0,0-28.2-18.5-92.1-18.5C810.2,18.1,775.7,67.3,734,67.3z")
+            path(class="elementor-shape-fill" d="M766.1,28.9c-200-57.5-266,65.5-395.1,19.5C242,1.8,242,5.4,184.8,20.6C128,35.8,132.3,44.9,89.9,52.5C28.6,63.7,0,0,0,0 h1000c0,0-9.9,40.9-83.6,48.1S829.6,47,766.1,28.9z")
+        .container
+          .row
+            .col.text-center
+              .block-ttl
+                h2.block__ttl.block__ttl_packs Пакеты
+                .block-ttl__comment.block-ttl__comment_packs Выберите пакет, который подойдет именно Вам
+          .row.mt-5
+            .col
+              .packs-item
+                .packs-item__img.packs-item__img1
+                h5.packs-item__ttl Пакет базовый
+                .packs-item__price
+                  .packs-item__price-ttl 5000
+                  .packs-item__price-descr бел.руб.
+                .packs-item__descr
+                  .packs-item__descr-item доступ на склон
+                  .packs-item__descr-item 3 занятия с инструктором
+                  .packs-item__descr-item трансфер
+                  .packs-item__descr-item размещение
+                  .packs-item__descr-item питание
+                  .packs-item__descr-item фотограф
+                .packs-item__button Выбрать
+            .col
+              .packs-item
+                .packs-item__img.packs-item__img2
+                h5.packs-item__ttl Пакет расширенный
+                .packs-item__price
+                  .packs-item__price-ttl 6000
+                  .packs-item__price-descr бел.руб.
+                .packs-item__descr
+                  .packs-item__descr-item доступ на склон
+                  .packs-item__descr-item 3 занятия с инструктором
+                  .packs-item__descr-item покатушки на снегоходах по горам
+                  .packs-item__descr-item трансфер
+                  .packs-item__descr-item размещение
+                  .packs-item__descr-item питание
+                  .packs-item__descr-item фотограф
+                .packs-item__button Выбрать
+            .col
+              .packs-item
+                .packs-item__img.packs-item__img3
+                h5.packs-item__ttl Пакет V.I.P
+                .packs-item__price
+                  .packs-item__price-ttl 6000
+                  .packs-item__price-descr бел.руб.
+                .packs-item__descr
+                  .packs-item__descr-item доступ на склон
+                  .packs-item__descr-item 3 занятия с инструктором
+                  .packs-item__descr-item покатушки на снегоходах по горам
+                  .packs-item__descr-item покатушки на собачьих упряжках
+                  .packs-item__descr-item трансфер
+                  .packs-item__descr-item размещение
+                  .packs-item__descr-item питание
+                  .packs-item__descr-item фотограф   
+                .packs-item__button Выбрать      
+    //- Слайдер с фото
+    mixin slider()
+      .slider
+        .container
+          .row
+            .col.text-center
+              .block-ttl
+                .block__ttl.block__ttl_slider Фотографии
+          .row
+            .col
+              .slider-items
+                .slider-items__item-wrap
+                  .slider-items__item(style="background-image: url('images/image.jpg');")
+                .slider-items__item-wrap
+                  .slider-items__item(style="background-image: url('images/image.jpg');")
+                .slider-items__item-wrap
+                  .slider-items__item(style="background-image: url('images/image.jpg');") 
+                .slider-items__item-wrap
+                  .slider-items__item(style="background-image: url('images/image.jpg');") 
+                .slider-items__item-wrap
+                  .slider-items__item(style="background-image: url('images/image.jpg');") 
+                .slider-items__item-wrap
+                  .slider-items__item(style="background-image: url('images/image.jpg');") 
+    //- Слайдер с отзывами
+    mixin slider2()
+      .slider-reviews
+        .container
+          .row
+            .col.text-center
+              .block-ttl
+                .block__ttl.block__ttl_reviews Отзывы
+          .row
+            .col
+              .slider-reviews__items
+                .slider-reviews__items-item
+                  .slider-reviews__items-item-foto 
+                  .slider-reviews__items-item-text Cras ultricies ligula sed magna dictum porta. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Cras ultricies ligula sed magna dictum porta. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Vivamus suscipit tortor eget felis porttitor volutpat. Donec rutrum congue leo eget malesuada. 
+                  .slider-reviews__items-item-name Сергей
+                  .slider-reviews__items-item-date 21.10.2017
+                .slider-reviews__items-item
+                  .slider-reviews__items-item-foto
+                  .slider-reviews__items-item-text Cras ultricies ligula sed magna dictum porta. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Cras ultricies ligula sed magna dictum porta. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Vivamus suscipit tortor eget felis porttitor volutpat. Donec rutrum congue leo eget malesuada. 
+                  .slider-reviews__items-item-name Сергей
+                  .slider-reviews__items-item-date 21.10.2017
+                .slider-reviews__items-item
+                  .slider-reviews__items-item-foto
+                  .slider-reviews__items-item-text Cras ultricies ligula sed magna dictum porta. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Cras ultricies ligula sed magna dictum porta. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Vivamus suscipit tortor eget felis porttitor volutpat. Donec rutrum congue leo eget malesuada. 
+                  .slider-reviews__items-item-name Сергей
+                  .slider-reviews__items-item-date 21.10.2017
+                .slider-reviews__items-item
+                  .slider-reviews__items-item-foto
+                  .slider-reviews__items-item-text Cras ultricies ligula sed magna dictum porta. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Cras ultricies ligula sed magna dictum porta. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Vivamus suscipit tortor eget felis porttitor volutpat. Donec rutrum congue leo eget malesuada. 
+                  .slider-reviews__items-item-name Сергей
+                  .slider-reviews__items-item-date 21.10.2017
+    //- О нас
+    mixin about-us()
+      .about-us
+        .container
+          .row
+            .col.text-center
+              .block-ttl
+                .block__ttl.block__ttl_about-us О нас
+          .row
+            .col          
+              img.about-us__img(src='')
+              .about-us__txt Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Sed porttitor lectus nibh. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Cras ultricies ligula sed magna dictum porta. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Donec sollicitudin molestie malesuada. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Donec rutrum congue leo eget malesuada.
+    //- Контакты
+    mixin contacts()
+      .contacts
+        .container
+          .row
+            .col
+            .col
+    // УТП
+    +utp()
+    // /УТП
+    // Мы в цифрах
+    +v-cifrah()
+    // /Мы в цифрах
+    // Пакеты туров
+    +paketi()
+    // /Пакеты туров
+    // Слайдер с фото
+    +slider()
+    // Слайдер с фото
+    // Слайдер с отзывами                  
+    +slider2()
+    // /Слайдер с отзывами
+    // About us
+    +about-us()
+    // /About us
+    // Контакты
+    +contacts()
+    // /Контакты
+    // Footer 
+    include ../blocks/footer
+    //- // Свои скрипты
+    //- block customScripts
